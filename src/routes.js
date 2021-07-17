@@ -36,6 +36,7 @@ import UpgradeToPro from 'views/UpgradeToPro/UpgradeToPro.js';
 // core components/views for RTL layout
 import RTLPage from 'views/RTLPage/RTLPage.js';
 import UserSignUp from 'views/UserSignUp/UserSignUp';
+import UserLogin from 'views/UserLogin/UserLogin';
 
 const dashboardRoutes = [
   {
@@ -60,6 +61,14 @@ const dashboardRoutes = [
     rtlName: 'ملف تعريفي للمستخدم',
     icon: Person,
     component: UserSignUp,
+    layout: '/admin',
+  },
+  {
+    path: '/login',
+    name: 'User Login',
+    rtlName: 'ملف تعريفي للمستخدم',
+    icon: Person,
+    component: UserLogin,
     layout: '/admin',
   },
   {

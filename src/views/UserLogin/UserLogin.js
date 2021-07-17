@@ -11,8 +11,9 @@ import CardHeader from 'components/Card/CardHeader.js';
 import CardAvatar from 'components/Card/CardAvatar.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardFooter from 'components/Card/CardFooter.js';
-
 import avatar from 'assets/img/faces/marc.jpg';
+import { useDispatch } from 'react-redux';
+import { signIn } from 'actions';
 
 const styles = {
   cardCategoryWhite: {
@@ -36,6 +37,7 @@ const styles = {
 const useStyles = makeStyles(styles);
 
 export default function UserLogin() {
+  const dispatch = useDispatch();
   const classes = useStyles();
 
   const onSubmitHandler = async (e) => {
@@ -66,6 +68,9 @@ export default function UserLogin() {
         // console.log(data.errors);
         usernameError.textContent = data.errors.username;
         passwordError.textContent = data.errors.password;
+      } else {
+        dispatch(signIn());
+        document.location.assign('/');
       }
     } catch (err) {
       console.log(err);

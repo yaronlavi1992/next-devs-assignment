@@ -70,6 +70,8 @@ export default function UserSignUp() {
       });
       const data = await res.json();
       if (data.errors) {
+      } else {
+        document.location.assign('/');
       }
     } catch (err) {
       console.log(err);

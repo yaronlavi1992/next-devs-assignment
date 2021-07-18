@@ -43,7 +43,6 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/material-dashboard-react/issues"
   },
-  "homepage": "https://creativetimofficial.github.io/material-dashboard-react/#/dashboard",
   "optionalDependencies": {
     "@types/googlemaps": "3.37.3",
     "@types/markerclustererplus": "2.1.33",
@@ -64,6 +63,5 @@
       "not op_mini all"
     ],
     "development": []
-  },
-  "proxy": "https://next-devs-assignment-server.herokuapp.com"
+  }
 }
